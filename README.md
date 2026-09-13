@@ -1,12 +1,10 @@
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS_VeilCrypt/blob/4e61f42c74cbb43abcce7026c029d6c3dcd9773f/assest/portada.png" alt="VeilCrypt">
+</p>
+
 # ORS4 VeilCrypt
 
-**VeilCrypt — Herramienta para cifrar mensajes y ocultar información y archivos cifrados dentro de imágenes y archivos de audio mediante técnicas de esteganografía y cifrado.**
-
-![VeilCrypt Banner](./docs/images/veilcrypt-banner.png)
-
-## Descripción
-
-**ORS4 VeilCrypt** es una herramienta de seguridad desarrollada en Python que combina **cifrado y esteganografía** para proteger y ocultar información dentro de archivos aparentemente convencionales.
+Es una herramienta de seguridad desarrollada en Python que combina **cifrado y esteganografía** para proteger y ocultar información dentro de archivos aparentemente convencionales.
 
 La herramienta permite trabajar con dos tipos principales de portadores: **imágenes PNG, BMP y archivos de audio WAV**. Antes de que cualquier archivo o información sea ocultada dentro del portador, el contenido es cifrado, de modo que la extracción del contenido oculto no implica necesariamente que la información pueda ser interpretada sin disponer de la clave correspondiente.
 
@@ -45,6 +43,7 @@ La idea fundamental es separar dos conceptos:
 
 De esta forma, incluso si un tercero identifica y extrae el contenido oculto mediante técnicas externas, encontrará información cifrada que requiere la clave correspondiente para poder ser descifrada.
 
+
 ---
 
 ## Características principales
@@ -58,6 +57,10 @@ El resultado incluye la información necesaria para conservar la clave de recupe
 Las claves pueden copiarse directamente o exportarse mediante archivos `.vlkey`.
 
 > **Importante:** la clave es necesaria para recuperar información cifrada. VeilCrypt no almacena las claves utilizadas en el historial de operaciones.
+
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS_VeilCrypt/blob/02cd3dcf34edc3cedbadd4d79caf4316dd720f20/assest/Captura%20de%20ecr%C3%A3%202026-09-08%20171814~2.jpg" alt="VeilCrypt">
+</p>
 
 ---
 
@@ -87,7 +90,10 @@ La información se incorpora mediante técnicas de **LSB (Least Significant Bit)
 
 La imagen resultante sera en formato PNG
 
-![Proceso de ocultación en imagen](./docs/images/image-steganography.png)
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS_VeilCrypt/blob/02cd3dcf34edc3cedbadd4d79caf4316dd720f20/assest/Captura%20de%20ecr%C3%A3%202026-09-08%20170448~2.jpg" alt="VeilCrypt">
+</p>
+
 
 ---
 
@@ -119,13 +125,19 @@ Actualmente, esta funcionalidad presenta una **limitación conocida**: dependien
 
 Este comportamiento se encuentra identificado como una línea de mejora para futuras versiones.
 
-![Proceso de ocultación en audio](./docs/images/audio-steganography.png)
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS_VeilCrypt/blob/02cd3dcf34edc3cedbadd4d79caf4316dd720f20/assest/Captura%20de%20ecr%C3%A3%202026-09-08%20171020~2.jpg" alt="VeilCrypt">
+</p>
 
 ---
 
 ## Extracción de información
 
 VeilCrypt permite recuperar información previamente ocultada dentro de una imagen o archivo de audio.
+
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS_VeilCrypt/blob/02cd3dcf34edc3cedbadd4d79caf4316dd720f20/assest/Captura%20de%20ecr%C3%A3%202026-09-08%20171715~2.jpg" alt="VeilCrypt">
+</p>
 
 Durante el proceso de extracción, la herramienta:
 
@@ -137,7 +149,9 @@ Durante el proceso de extracción, la herramienta:
 
 En función del tipo de contenido ocultado, la herramienta muestra la información recuperada o proporciona la ubicación del archivo extraído junto con sus detalles.
 
-![Proceso de extracción](./docs/images/extraction-process.png)
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS_VeilCrypt/blob/02cd3dcf34edc3cedbadd4d79caf4316dd720f20/assest/Captura%20de%20ecr%C3%A3%202026-09-08%20171515~2.jpg" alt="VeilCrypt">
+</p>
 
 ---
 
@@ -155,8 +169,6 @@ VeilCrypt permite:
 Por motivos de seguridad, **las claves no se almacenan en el historial de operaciones**.
 
 El usuario es responsable de conservar sus claves de forma segura.
-
-![Gestión de claves](./docs/images/key-management.png)
 
 ---
 
@@ -177,6 +189,10 @@ Por este motivo, una imagen con un tamaño de archivo aparentemente grande no ne
 La misma consideración se aplica a los archivos de audio WAV, donde la capacidad depende principalmente de características como la cantidad de muestras, canales y profundidad de bits.
 
 Si el contenido supera la capacidad disponible del portador, la operación no podrá completarse correctamente.
+
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS_VeilCrypt/blob/4df3f687358fdc145f9a90c435a4a100bf493212/assest/Screenshot%202026-09-13%20222948.png" alt="VeilCrypt">
+</p>
 
 ---
 
@@ -206,7 +222,9 @@ Por razones de seguridad, **las claves de cifrado no se almacenan en el historia
 
 El historial está orientado a registrar información operativa y no secretos criptográficos.
 
-![Historial de operaciones](./docs/images/history.png)
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS_VeilCrypt/blob/02cd3dcf34edc3cedbadd4d79caf4316dd720f20/assest/Screenshot%202026-09-13%20221415.png" alt="VeilCrypt">
+</p>
 
 ---
 
@@ -214,20 +232,17 @@ El historial está orientado a registrar información operativa y no secretos cr
 
 Los archivos generados contienen información oculta directamente en los datos del archivo portador. Por este motivo, el archivo resultante debe mantenerse intacto después de su generación.
 
-Algunas aplicaciones y plataformas pueden comprimir, recomprimir, redimensionar o recodificar automáticamente las imágenes y archivos de audio enviados.
-Estas modificaciones pueden alterar los datos utilizados para ocultar la información y provocar que el contenido oculto no pueda recuperarse correctamente.
+Algunas aplicaciones y plataformas, como **WhatsApp, Telegram, Instagram, Messenger y otras**, pueden comprimir, recomprimir, redimensionar o recodificar automáticamente las imágenes y archivos de audio enviados. Estas modificaciones pueden alterar los datos utilizados para ocultar la información y provocar que el contenido oculto no pueda recuperarse correctamente.
 
-Por ello:
+**Para evitarlo, se recomienda:**
 
-Evita enviar directamente imágenes o audios con información oculta mediante aplicaciones que puedan modificar o recomprimir el archivo.
+- Al enviar una **imagen o archivo de audio**, utilizar la opción **"Enviar como archivo"** o **"Documento"**, en lugar de enviarlo directamente como imagen o audio.
+- Verificar que la plataforma **no modifique ni comprima el archivo** durante el envío.
+- Como alternativa, incluir el archivo dentro de un **ZIP, RAR u otro contenedor** que preserve su contenido original.
 
-Para conservar el archivo exactamente como fue generado, es recomendable enviarlo como archivo/documento, evitando funciones que procesen la imagen o el audio.
-
-Otra alternativa es incluir el archivo dentro de un ZIP, RAR u otro contenedor que preserve sus bytes originales.
+**El objetivo es que el archivo recibido mantenga exactamente los mismos datos que el archivo generado por VeilCrypt.**
 
 El mismo principio aplica tanto a imágenes PNG o BMP como a archivos de audio WAV.
-
-En resumen: el archivo portador debe llegar al destinatario sin modificaciones respecto al archivo generado por VeilCrypt.
 
 ---
 
@@ -235,7 +250,9 @@ En resumen: el archivo portador debe llegar al destinatario sin modificaciones r
 
 La aplicación utiliza una interfaz gráfica desarrollada con **CustomTkinter**, diseñada para proporcionar una experiencia de uso sencilla y mantener separadas las diferentes operaciones de protección, ocultación y extracción.
 
-![Interfaz principal](./docs/images/interface-main.png)
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS_VeilCrypt/blob/02cd3dcf34edc3cedbadd4d79caf4316dd720f20/assest/Screenshot%202026-09-13%20222016.png" alt="VeilCrypt">
+</p>
 
 *Interfaz principal de ORS4 VeilCrypt.*
 
@@ -329,3 +346,7 @@ El objetivo es permitir que el código pueda ser aprendido y reutilizado por la 
 Copyright © 2026 Nelson Arteaga (@n0rs4rt) — ORS4Tech
 
 Licencia: MIT
+
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS_VeilCrypt/blob/4df3f687358fdc145f9a90c435a4a100bf493212/assest/Captura%20de%20ecr%C3%A3%202026-09-08%20173517~2.jpg" alt="VeilCrypt">
+</p>
