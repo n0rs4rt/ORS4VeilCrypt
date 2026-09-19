@@ -101,13 +101,16 @@ La imagen resultante sera en formato PNG
 
 VeilCrypt permite utilizar archivos **WAV** como portadores para ocultar información cifrada.
 
-El proceso sigue el mismo principio:
+El proceso sigue el mismo principio utilizado en las imágenes: la información se cifra primero y posteriormente se incorpora al archivo de audio mediante técnicas de LSB (Least Significant Bit).
+
+Cuando el contenido a ocultar es un archivo, este se cifra directamente. Cuando se trata de texto, VeilCrypt crea primero un archivo temporal .txt con el contenido introducido por el usuario; este archivo se cifra y posteriormente se utiliza como contenido oculto.
+
+El resultado de la operación se guarda como un nuevo archivo WAV.
 
 <p align="center">
   <img src="https://github.com/n0rs4rt/ORS_VeilCrypt/blob/4474f1ee2f92273c07f62b112b9e2487c90e9cb4/assest/4.png" alt="VeilCrypt" width="700">
 </p>
 
-La información se incorpora en bits de menor significancia de las muestras de audio para minimizar el impacto sobre la señal original.
 
 Actualmente, esta funcionalidad presenta una **limitación conocida**: dependiendo del contenido del audio y de la cantidad de información ocultada, puede producirse una ligera alteración perceptible o un ruido de fondo después del procesamiento.
 
@@ -243,35 +246,6 @@ La aplicación utiliza una interfaz gráfica desarrollada con **CustomTkinter**,
 </p>
 
 *Interfaz principal de ORS4 VeilCrypt.*
-
----
-
-## Arquitectura conceptual
-
-La herramienta combina diferentes capas de procesamiento:
-
-```text
-┌───────────────────────────────┐
-│           Usuario             │
-└───────────────┬───────────────┘
-                │
-                ▼
-┌───────────────────────────────┐
-│       Interfaz gráfica        │
-│        CustomTkinter          │
-└───────────────┬───────────────┘
-                │
-        ┌───────┴────────┐
-        ▼                ▼
-    Cifrado        Esteganografía
-        │                │
-        ▼                ▼
-    Fernet         Imagen / Audio
-        │                │
-        └───────┬────────┘
-                ▼
-        Archivo resultante
-```
 
 ---
 
