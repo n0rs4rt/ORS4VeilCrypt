@@ -103,21 +103,9 @@ VeilCrypt permite utilizar archivos **WAV** como portadores para ocultar informa
 
 El proceso sigue el mismo principio:
 
-```text
-Archivo
-   │
-   ▼
-Cifrado
-   │
-   ▼
-Payload cifrado
-   │
-   ▼
-Audio WAV
-   │
-   ▼
-Audio resultante
-```
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS_VeilCrypt/blob/4474f1ee2f92273c07f62b112b9e2487c90e9cb4/assest/4.png" alt="VeilCrypt" width="700">
+</p>
 
 La información se incorpora en bits de menor significancia de las muestras de audio para minimizar el impacto sobre la señal original.
 
