@@ -18,30 +18,12 @@ El proyecto fue diseñado con una interfaz gráfica orientada a facilitar el uso
 
 El proceso de ocultación sigue una secuencia de protección y ocultación de la información:
 
-```text
-Información original
-        │
-        ▼
-     CIFRADO
-        │
-        ▼
-Contenido cifrado
-        │
-        ▼
-   ESTEGANOGRAFÍA
-        │
-        ▼
-Imagen PNG / Audio WAV
-con información oculta
-```
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS_VeilCrypt/blob/b2a6387a3d5a5aa65aacb26d0070b457d49a8db6/assest/1.png" alt="VeilCrypt">
+</p>
 
-La idea fundamental es separar dos conceptos:
-
-**Cifrar la información** protege su contenido.
-
-**Ocultar la información** reduce la evidencia de que dicha información existe dentro del archivo portador.
-
-De esta forma, incluso si un tercero identifica y extrae el contenido oculto mediante técnicas externas, encontrará información cifrada que requiere la clave correspondiente para poder ser descifrada.
+VeilCrypt procesa la información en varias etapas. El contenido seleccionado se lee en formato binario, se cifra mediante Fernet y posteriormente se incorpora al archivo portador mediante técnicas de esteganografía LSB.
+El resultado es una imagen o un archivo de audio que contiene el contenido cifrado oculto.
 
 
 ---
