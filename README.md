@@ -25,6 +25,33 @@ El proceso de ocultación sigue una secuencia de protección y ocultación de la
 VeilCrypt procesa la información en varias etapas. El contenido seleccionado se lee en formato binario, se cifra mediante Fernet y posteriormente se incorpora al archivo portador mediante técnicas de esteganografía LSB.
 El resultado es una imagen o un archivo de audio que contiene el contenido cifrado oculto.
 
+---
+## ¿Cómo se oculta la información?
+
+La esteganografía utilizada por VeilCrypt se basa en la técnica LSB (Least Significant Bit). Este método permite almacenar información dentro de un archivo portador modificando sus bits menos significativos.
+
+Antes de realizar esta inserción, VeilCrypt cifra la información que se desea ocultar. El resultado es un conjunto de datos cifrados que posteriormente se incorpora al archivo portador mediante la técnica LSB.
+
+En la versión 1.0.0, VeilCrypt utiliza 2 bits menos significativos para realizar la inserción.
+
+De forma simplificada, si un valor del archivo portador está representado por:
+
+
+```
+10110110
+```
+
+y los datos cifrados que deben almacenarse son:
+
+```
+01
+```
+
+los dos últimos bits del valor del portador se sustituyen por esos bits:
+
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS_VeilCrypt/blob/b317edda78bcdac3972874a749e49307b788d7a4/assest/2.png" alt="VeilCrypt">
+</p>
 
 ---
 
@@ -48,7 +75,10 @@ Las claves pueden copiarse directamente o exportarse mediante archivos `.vlkey`.
 
 ### Ocultación de archivos en imágenes
 
-Permite utilizar una imagen **PNG** o **BMP** como archivo portador y ocultar dentro de ella información previamente cifrada.
+ermite utilizar una imagen PNG o BMP como archivo portador y ocultar dentro de ella un archivo previamente cifrado.
+
+El archivo seleccionado se cifra antes de realizar la ocultación. Posteriormente, el contenido cifrado se incorpora a los datos de la imagen mediante la técnica LSB (Least Significant Bit).
+
 
 Proceso:
 
@@ -68,7 +98,7 @@ Imagen PNG o BMP
 Imagen resultante
 ```
 
-La información se incorpora mediante técnicas de **LSB (Least Significant Bit)**, modificando bits de menor significancia de los datos de imagen.
+
 
 La imagen resultante sera en formato PNG
 
