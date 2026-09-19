@@ -82,21 +82,9 @@ El archivo seleccionado se cifra antes de realizar la ocultación. Posteriorment
 
 Proceso:
 
-```text
-Archivo
-   │
-   ▼
-Cifrado
-   │
-   ▼
-Payload cifrado
-   │
-   ▼
-Imagen PNG o BMP
-   │
-   ▼
-Imagen resultante
-```
+<p align="center">
+  <img src="https://github.com/n0rs4rt/ORS_VeilCrypt/blob/8d790e7a7a0fb709e7e87c9b8f221c57e832b227/assest/3.png" alt="VeilCrypt">
+</p>
 
 
 
