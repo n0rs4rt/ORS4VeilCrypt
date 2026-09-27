@@ -13,7 +13,18 @@ VeilCrypt también permite **cifrar y descifrar mensajes directamente**, sin nec
 El proyecto fue diseñado con una interfaz gráfica orientada a facilitar el uso de estas técnicas sin necesidad de trabajar directamente desde una terminal.
 
 ---
+## Versiones disponibles
 
+- **Versión principal**  
+  Para uso normal de la aplicación.
+  [ Descargar Ors4VeilCrypt_V1.0.0](https://github.com/n0rs4rt/ORS4VeilCrypt/releases/download/v1.0.0/Ors4_VeilCrypt_v1.0.0.zip)
+
+- **Versión debug**  
+  La versión DEBUG está destinada principalmente a desarrolladores o usuarios que deseen reportar errores.
+  La consola integrada muestra información adicional que facilita el diagnóstico de incidencias. Para un uso normal, se recomienda descargar la versión principal.
+  [ Descargar Ors4VeilCrypt_Debug V1.0.0](https://github.com/n0rs4rt/ORS4VeilCrypt/releases/download/v1.0.0/Ors4_VeilCrypt_v1.0.0_debug.zip)
+
+---
 ## Funcionamiento
 
 El proceso de ocultación sigue una secuencia de protección y ocultación de la información:
