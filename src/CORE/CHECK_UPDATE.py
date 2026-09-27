@@ -2,7 +2,7 @@ import urllib.request, json
 
 def consultar_update():
     version_actual = "v1.0.0"
-    url = "https://api.github.com/repos/n0rs4rt/ORS_VeilCrypt/releases/latest"
+    url = "https://api.github.com/repos/n0rs4rt/ORS4VeilCrypt/releases/latest"
     
     try:
         respuesta = urllib.request.urlopen(url)
