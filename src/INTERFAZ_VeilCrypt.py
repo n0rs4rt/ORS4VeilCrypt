@@ -2496,7 +2496,7 @@ class Interfaz (ctk.CTk):
         boton_instagram.grid(row=0, column=3, padx=10, pady=10, sticky="ew")
 
         logo_documentacion = ctk.CTkImage(light_image=Image.open(documentacion),size=(24,24))
-        boton_documentacion = ctk.CTkButton(frame_redes, image=logo_documentacion, compound="left",text="  Documentación", font=("segoe ui", 16, "bold"), text_color="#f3f3f3",fg_color="#132033",hover_color="#132033", border_color="#2b3542", border_width=1,anchor="center", height=45,cursor="hand2",command=lambda: webbrowser.open("https://github.com/n0rs4rt/VeilCrypt/"))
+        boton_documentacion = ctk.CTkButton(frame_redes, image=logo_documentacion, compound="left",text="  Documentación", font=("segoe ui", 16, "bold"), text_color="#f3f3f3",fg_color="#132033",hover_color="#132033", border_color="#2b3542", border_width=1,anchor="center", height=45,cursor="hand2",command=lambda: webbrowser.open("https://github.com/n0rs4rt/ORS4VeilCrypt"))
         boton_documentacion.grid(row=0, column=4, padx=10, pady=10, sticky="ew")
 
         #Desarrollado por
